@@ -1,4 +1,4 @@
-# Invariant Trajectory Tracking Control for Self Driving Car
+# Invariant Trajectory Tracking Control for Self-Driving Car
 Code developed for the work published in "C. Tiriolo, W. Lucia -  On the Design of Control Invariant Regions for Feedback Linearized Car-Like Vehicles  - ACC - LCSS 2023"
 
 Full paper at: https://doi.org/10.1109/LCSYS.2022.3224680
@@ -11,15 +11,14 @@ Consider a self-driving car whose kinematics are described by bicycle models. De
 The code was tested on Matlab 2020a environment and it requires Ellipsoidal Toolbox ET (https://www.mathworks.com/matlabcentral/fileexchange/21936-ellipsoidal-toolbox-et). 
 
 # File Descriptions 
-- Khepera_iv_FL_RHC_traj_track.m: It is the main script to run in order to perform the experiment proposed in the paper. 
-- Khepera4.m: It represents the core of the application. It is a Matlab class that implements the main communication functionalities between the tracking controller running on Matlab and the server running on Khepera IV
-- STTT_control_parameters.m: It's a Matlab class defining the parameters needed by the proposed tracking controller.
-- "eight_traj_generation.m" and "circular_traj_generation.m" implements the reference trajectory, an eight-shaped and a circular one, respectively.
+- Invariant_set_Trajectory_Tracking_Control_approachACC23.m: It is the main script to run in order to simulate the algorithm  developed in the paper. 
+- DiffDrive.m: It's a Matlab function that implements the bicycle kinematics. It's used by the method ode45 to solve the differential equations describing the car's motion in the plane.
+- Simulink_model_parameters.m: It's a script implementing all the parameters necessary to simulate the algorithm on Simulink. 
+- Car_like_robot_trajectory_tracking.slx: It's a Simulink model that simulates the tracking control algorithm developed in the paper. 
 
-# Demo 
-- Connect KheperaIV to the host machine through Bluetooth and set the right port on the script "Khepera_iv_FL_RHC_traj_track.m".
-- Run the Bluetooth server on the KheperaIV side and then, run the script Khepera_iv_FL_RHC_traj_track.m
+# Demo (Matlab)
+- Run "Invariant_set_Trajectory_Tracking_Control_approachACC23.m"
 
-# Videos
-- https://www.youtube.com/watch?v=A0Tlbgr08tY&ab_channel=PreCySeGroup
-- https://www.youtube.com/watch?v=L3wmg-pHx_4&list=PLh-6B_s-jPuT8RTDOJM96GXu4y1IBIeoC&ab_channel=PreCySeGroup
+# Demo (Simulink)
+- Run the script "Simulink_model_parameters.m"
+- Run the Simulink model Car_like_robot_trajectory_tracking.slx (required Matlab 2020a or later versions)  
