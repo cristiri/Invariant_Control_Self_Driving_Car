@@ -22,5 +22,3 @@ The code was tested on Matlab 2020a environment and it requires Ellipsoidal Tool
 # Demo (Simulink)
 - Run the script "Simulink_model_parameters.m"
 - Run the Simulink model Car_like_robot_trajectory_tracking.slx (required Matlab 2020a or later versions)
-
-*************PROVA
